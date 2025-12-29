@@ -40,7 +40,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#ffffff>via</>  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "<#ffffff>via</>  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
