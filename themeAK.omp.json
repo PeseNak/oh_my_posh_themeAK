@@ -11,6 +11,12 @@
           "template": "🜲 "
         },
         {
+          "type": "text",
+          "style": "plain",
+          "foreground": "transparent",
+          "template": "{{ if .Env.WSL_DISTRO_NAME }}{{ $d := lower .Env.WSL_DISTRO_NAME }}{{ if contains \"ubuntu\" $d }}<#de4714>\uf31b </> {{ else if contains \"arch\"  $d}}<#248de5>\udb82\udcc7 </> {{ else if contains \"debian\" $d }}<#d80f56>\ue77d </> {{ else if contains \"fedora\" $d }}<#56a5db>\ue7d9 </> {{ else if contains \"kali\" $d }}<#087908>\uf327 </> {{ else if contains \"nix\" $d }}<#577bc5>\udb84\udd05 </> {{ else }}<#636463>\uf17c </> {{ end }}{{ end }}"
+        },
+        {
           "foreground": "#FFBD00",
           "style": "plain",
           "template": "{{ .UserName }}'s ",
@@ -40,7 +46,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#ffffff>via</>  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "<#ffffff>via</> \ued0d {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
@@ -49,7 +55,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#ffffff>via</>  {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} ",
+          "template": "<#ffffff>via</> \ue235 {{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }} ",
           "type": "python"
         },
         {
@@ -58,7 +64,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#ffffff>via</>  {{ .Full }} ",
+          "template": "<#ffffff>via</> \ue627 {{ .Full }} ",
           "type": "go"
         },
         {
@@ -67,7 +73,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#ffffff>via</>  {{ .Full }} ",
+          "template": "<#ffffff>via</> \ue64c {{ .Full }} ",
           "type": "dart"
         }
       ],
